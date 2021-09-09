@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AC754B726E9996F005498EE /* TennisSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754B626E9996F005498EE /* TennisSetupViewController.swift */; };
+		1AC754B926E99B2F005498EE /* SelectForehandVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754B826E99B2F005498EE /* SelectForehandVideoViewController.swift */; };
 		1AF1E13826E19FC6002F1BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1E13726E19FC6002F1BF1 /* AppDelegate.swift */; };
 		1AF1E13A26E19FC6002F1BF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1E13926E19FC6002F1BF1 /* SceneDelegate.swift */; };
 		1AF1E13C26E19FC6002F1BF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1E13B26E19FC6002F1BF1 /* HomeViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AC754B626E9996F005498EE /* TennisSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisSetupViewController.swift; sourceTree = "<group>"; };
+		1AC754B826E99B2F005498EE /* SelectForehandVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectForehandVideoViewController.swift; sourceTree = "<group>"; };
 		1AF1E13426E19FC6002F1BF1 /* Axcell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axcell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF1E13726E19FC6002F1BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AF1E13926E19FC6002F1BF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				1AF1E14026E19FC7002F1BF1 /* Assets.xcassets */,
 				1AF1E14226E19FC7002F1BF1 /* LaunchScreen.storyboard */,
 				1AF1E14526E19FC7002F1BF1 /* Info.plist */,
+				1AC754B626E9996F005498EE /* TennisSetupViewController.swift */,
+				1AC754B826E99B2F005498EE /* SelectForehandVideoViewController.swift */,
 			);
 			path = Axcell;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 				1AF1E13C26E19FC6002F1BF1 /* HomeViewController.swift in Sources */,
 				1AF1E13826E19FC6002F1BF1 /* AppDelegate.swift in Sources */,
 				1AF1E13A26E19FC6002F1BF1 /* SceneDelegate.swift in Sources */,
+				1AC754B926E99B2F005498EE /* SelectForehandVideoViewController.swift in Sources */,
+				1AC754B726E9996F005498EE /* TennisSetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,8 +35,8 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(tennisVC!, animated: true)
         
         // present(tennisVC!, animated: true, completion: nil)
-        
-    }
+      
+}
     
     
     
