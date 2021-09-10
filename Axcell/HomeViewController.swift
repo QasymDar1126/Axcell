@@ -22,19 +22,19 @@ class HomeViewController: UIViewController {
     }
     @IBAction func didTapFootball(_ sender: Any) {
         
-        // segue to Football VC
+        // segue to Football ViewController
     }
     
     
     @IBAction func didTapTennisBall(_ sender: Any) {
         
-        // segue to Tennis VC
+        // segue to Tennis ViewController
         
-        let tennisVC = storyboard?.instantiateViewController(identifier: "TennisSetupVC")
+        let vc = storyboard?.instantiateViewController(identifier: "TennisSetupViewController")
         
-        navigationController?.pushViewController(tennisVC!, animated: true)
+        navigationController?.pushViewController(vc!, animated: true)
         
-        // present(tennisVC!, animated: true, completion: nil)
+        // present(tennisViewController!, animated: true, completion: nil)
       
 }
     

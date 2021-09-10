@@ -1,16 +1,13 @@
 //
-//  SelectForehandVideoViewController.swift
+//  SelectBackhandVideoViewController.swift
 //  Axcell
 //
-//  Created by Qasym Dar on 9/8/21.
-//  https://www.youtube.com/watch?v=8YH0-jO14NQ
+//  Created by Qasym Dar on 9/9/21.
 //
 
 import UIKit
 
-class SelectForehandVideoViewController: UIViewController {
-    
-    
+class SelectBackhandVideoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

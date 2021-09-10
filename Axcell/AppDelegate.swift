@@ -3,7 +3,6 @@
 //  Axcell
 //
 //  Created by Qasym Dar on 9/2/21.
-//
 
 import UIKit
 
