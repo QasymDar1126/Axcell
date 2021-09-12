@@ -253,7 +253,7 @@
                                     <action selector="didTapNext:" destination="3WY-gI-90c" eventType="touchUpInside" id="280-by-Mik"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample overlay" translatesAutoresizingMaskIntoConstraints="NO" id="R4a-FL-w0V">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R4a-FL-w0V">
                                 <rect key="frame" x="0.0" y="44" width="375" height="500"/>
                             </imageView>
                         </subviews>
@@ -272,6 +272,7 @@
                     <connections>
                         <outlet property="cameraView" destination="r08-vh-s1Q" id="ecQ-pJ-ePT"/>
                         <outlet property="captionLabel" destination="Hxd-OC-qjw" id="aBY-yc-mI8"/>
+                        <outlet property="overlayImageView" destination="R4a-FL-w0V" id="Q97-ZJ-hkk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rc-bj-HAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -314,7 +315,6 @@
         <image name="baseball button" width="480" height="480"/>
         <image name="football button" width="418" height="247"/>
         <image name="golf ball" width="266" height="266"/>
-        <image name="sample overlay" width="740" height="950"/>
         <image name="soccer ball" width="182" height="182"/>
         <image name="tennis button" width="266" height="266"/>
         <systemColor name="systemBackgroundColor">

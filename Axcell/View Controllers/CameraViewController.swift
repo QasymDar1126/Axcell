@@ -10,7 +10,7 @@ import AVFoundation
 
 class CameraViewController: UIViewController {
     
-    var videoKey: String!
+    var videoFilename: String!
     
     var captureSession: AVCaptureSession!
     var stillImageOutput: AVCapturePhotoOutput!
@@ -18,6 +18,7 @@ class CameraViewController: UIViewController {
 
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var overlayImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,19 @@ class CameraViewController: UIViewController {
         
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = .medium
+        
+        let urlPath = Bundle.main.url(forResource: videoFilename, withExtension: "mp4")!
+
+        do {
+            let asset = AVURLAsset(url: urlPath, options: nil)
+            let imgGenerator = AVAssetImageGenerator(asset: asset)
+            imgGenerator.appliesPreferredTrackTransform = true
+            let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(value: 0, timescale: 1), actualTime: nil)
+            let thumbnail = UIImage(cgImage: cgImage)
+            overlayImageView.image = thumbnail
+        } catch let error {
+            print("*** Error generating thumbnail: \(error.localizedDescription)")
+        }
         
         guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
             else {

@@ -26,10 +26,10 @@ class SelectVideoViewController: UIViewController {
         view.addSubview(playerView)
     }
     
-    func didTapSelect(videoKey: String) {
+    func didTapSelect(videoFilename: String) {
         let cameraVc = storyboard!.instantiateViewController(identifier: "CameraViewController") as! CameraViewController
         // 3
-        cameraVc.videoKey = videoKey
+        cameraVc.videoFilename = videoFilename
         navigationController?.pushViewController(cameraVc, animated: true) // segue (animation)
     }
 }
@@ -56,6 +56,7 @@ extension SelectVideoViewController: UITableViewDelegate, UITableViewDataSource 
                 }
         
         cell.delegate = self
+        cell.videoFilename = arrayOfVideoFilenames[indexPath.row]
         
         return cell
     }

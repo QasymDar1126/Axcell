@@ -11,13 +11,13 @@ import YouTubePlayer
 class VideoCell: UITableViewCell {
     
     var delegate: SelectVideoViewController!
-    var videoKey: String!
+    var videoFilename: String!
     
     @IBOutlet weak var playerView: PlayerView!
     
     @IBAction func selectVideo(_ sender: Any) {
         // segue
-        delegate.didTapSelect(videoKey: videoKey) // 2
+        delegate.didTapSelect(videoFilename: videoFilename) // 2
     }
     
     override func awakeFromNib() {

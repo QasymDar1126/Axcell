@@ -18,15 +18,25 @@ class TennisSetupViewController: UIViewController {
     @IBAction func didTapForehand(_ sender: Any) {
         // segue to SelectVideoViewController
         
-        let vc = storyboard?.instantiateViewController(identifier: "SelectVideoViewController")
-        
-        navigationController?.pushViewController(vc!, animated: true)
+        segueToCamera(sport: "Tennis", strokeType: "Forehand")
     }
+    
     @IBAction func didTapBackhand(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "SelectVideoViewController")
+        segueToCamera(sport: "Tennis", strokeType: "Backhand")
+    }
+    
+    func segueToCamera(sport: String, strokeType: String) {
+        let vc = storyboard?.instantiateViewController(identifier: "SelectVideoViewController") as! SelectVideoViewController
+        vc.arrayOfVideoFilenames = []
         
-        navigationController?.pushViewController(vc!, animated: true)
+        let numberOfVideos = Data.videos[sport]![strokeType]!["numVideos"] as! Int
+        var i = 1
+        while(i <= numberOfVideos) {
+            vc.arrayOfVideoFilenames.append("\(sport)\(strokeType)\(i)")
+            i += 1
+        }
         
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     /*
