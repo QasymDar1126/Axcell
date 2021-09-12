@@ -13,7 +13,7 @@ class SelectVideoViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var arrayOfVideoFilenames = ["one", "two"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,9 +21,6 @@ class SelectVideoViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        let playerView = PlayerView()
-        view.addSubview(playerView)
     }
     
     func didTapSelect(videoFilename: String) {
