@@ -3,25 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1AC754B726E9996F005498EE /* TennisSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754B626E9996F005498EE /* TennisSetupViewController.swift */; };
-		1AC754B926E99B2F005498EE /* SelectForehandVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754B826E99B2F005498EE /* SelectForehandVideoViewController.swift */; };
-		1AC754BB26EADD56005498EE /* SelectBackhandVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754BA26EADD55005498EE /* SelectBackhandVideoViewController.swift */; };
+		1AC754B926E99B2F005498EE /* SelectVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754B826E99B2F005498EE /* SelectVideoViewController.swift */; };
+		1AC754BF26EAEACB005498EE /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754BE26EAEACB005498EE /* VideoCell.swift */; };
+		1AC754C226EC0438005498EE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754C126EC0438005498EE /* CameraViewController.swift */; };
 		1AF1E13826E19FC6002F1BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1E13726E19FC6002F1BF1 /* AppDelegate.swift */; };
 		1AF1E13A26E19FC6002F1BF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1E13926E19FC6002F1BF1 /* SceneDelegate.swift */; };
 		1AF1E13C26E19FC6002F1BF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1E13B26E19FC6002F1BF1 /* HomeViewController.swift */; };
 		1AF1E13F26E19FC6002F1BF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF1E13D26E19FC6002F1BF1 /* Main.storyboard */; };
 		1AF1E14126E19FC7002F1BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF1E14026E19FC7002F1BF1 /* Assets.xcassets */; };
 		1AF1E14426E19FC7002F1BF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF1E14226E19FC7002F1BF1 /* LaunchScreen.storyboard */; };
+		21CD0C28322BC823A2784B39 /* Pods_Axcell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64B0B355D8419171BC6C012 /* Pods_Axcell.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1AC754B626E9996F005498EE /* TennisSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisSetupViewController.swift; sourceTree = "<group>"; };
-		1AC754B826E99B2F005498EE /* SelectForehandVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectForehandVideoViewController.swift; sourceTree = "<group>"; };
-		1AC754BA26EADD55005498EE /* SelectBackhandVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBackhandVideoViewController.swift; sourceTree = "<group>"; };
+		1AC754B826E99B2F005498EE /* SelectVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectVideoViewController.swift; sourceTree = "<group>"; };
+		1AC754BE26EAEACB005498EE /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		1AC754C126EC0438005498EE /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		1AF1E13426E19FC6002F1BF1 /* Axcell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axcell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF1E13726E19FC6002F1BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AF1E13926E19FC6002F1BF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		1AF1E14026E19FC7002F1BF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AF1E14326E19FC7002F1BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AF1E14526E19FC7002F1BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83F36F7ED32AB8E7E5B90BA4 /* Pods-Axcell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axcell.debug.xcconfig"; path = "Target Support Files/Pods-Axcell/Pods-Axcell.debug.xcconfig"; sourceTree = "<group>"; };
+		A64B0B355D8419171BC6C012 /* Pods_Axcell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Axcell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1EF278E58C0472797677F07 /* Pods-Axcell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axcell.release.xcconfig"; path = "Target Support Files/Pods-Axcell/Pods-Axcell.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CD0C28322BC823A2784B39 /* Pods_Axcell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AC754BC26EAEA87005498EE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AF1E13B26E19FC6002F1BF1 /* HomeViewController.swift */,
+				1AC754B626E9996F005498EE /* TennisSetupViewController.swift */,
+				1AC754B826E99B2F005498EE /* SelectVideoViewController.swift */,
+				1AC754C126EC0438005498EE /* CameraViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1AC754BD26EAEA99005498EE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1AF1E13726E19FC6002F1BF1 /* AppDelegate.swift */,
+				1AF1E13926E19FC6002F1BF1 /* SceneDelegate.swift */,
+				1AF1E14026E19FC7002F1BF1 /* Assets.xcassets */,
+				1AF1E14226E19FC7002F1BF1 /* LaunchScreen.storyboard */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1AC754C026EAEAD0005498EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AC754BE26EAEACB005498EE /* VideoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1AF1E12B26E19FC6002F1BF1 = {
 			isa = PBXGroup;
 			children = (
 				1AF1E13626E19FC6002F1BF1 /* Axcell */,
 				1AF1E13526E19FC6002F1BF1 /* Products */,
+				2D7BD616C2BF22BD837D598A /* Pods */,
+				DD21EF7EDAB9565C26B08818 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,18 +101,30 @@
 		1AF1E13626E19FC6002F1BF1 /* Axcell */ = {
 			isa = PBXGroup;
 			children = (
-				1AF1E13726E19FC6002F1BF1 /* AppDelegate.swift */,
-				1AF1E13926E19FC6002F1BF1 /* SceneDelegate.swift */,
-				1AF1E13B26E19FC6002F1BF1 /* HomeViewController.swift */,
-				1AF1E13D26E19FC6002F1BF1 /* Main.storyboard */,
-				1AF1E14026E19FC7002F1BF1 /* Assets.xcassets */,
-				1AF1E14226E19FC7002F1BF1 /* LaunchScreen.storyboard */,
 				1AF1E14526E19FC7002F1BF1 /* Info.plist */,
-				1AC754B626E9996F005498EE /* TennisSetupViewController.swift */,
-				1AC754B826E99B2F005498EE /* SelectForehandVideoViewController.swift */,
-				1AC754BA26EADD55005498EE /* SelectBackhandVideoViewController.swift */,
+				1AC754BD26EAEA99005498EE /* Utilities */,
+				1AC754BC26EAEA87005498EE /* View Controllers */,
+				1AC754C026EAEAD0005498EE /* Views */,
+				1AF1E13D26E19FC6002F1BF1 /* Main.storyboard */,
 			);
 			path = Axcell;
+			sourceTree = "<group>";
+		};
+		2D7BD616C2BF22BD837D598A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83F36F7ED32AB8E7E5B90BA4 /* Pods-Axcell.debug.xcconfig */,
+				E1EF278E58C0472797677F07 /* Pods-Axcell.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD21EF7EDAB9565C26B08818 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A64B0B355D8419171BC6C012 /* Pods_Axcell.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AF1E14826E19FC7002F1BF1 /* Build configuration list for PBXNativeTarget "Axcell" */;
 			buildPhases = (
+				0101E77644257A9D60AF3FAD /* [CP] Check Pods Manifest.lock */,
 				1AF1E13026E19FC6002F1BF1 /* Sources */,
 				1AF1E13126E19FC6002F1BF1 /* Frameworks */,
 				1AF1E13226E19FC6002F1BF1 /* Resources */,
+				722C582BB53DE0F75228243D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,16 +194,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0101E77644257A9D60AF3FAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Axcell-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		722C582BB53DE0F75228243D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Axcell/Pods-Axcell-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Axcell/Pods-Axcell-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Axcell/Pods-Axcell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AF1E13026E19FC6002F1BF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1AF1E13C26E19FC6002F1BF1 /* HomeViewController.swift in Sources */,
+				1AC754BF26EAEACB005498EE /* VideoCell.swift in Sources */,
 				1AF1E13826E19FC6002F1BF1 /* AppDelegate.swift in Sources */,
-				1AC754BB26EADD56005498EE /* SelectBackhandVideoViewController.swift in Sources */,
 				1AF1E13A26E19FC6002F1BF1 /* SceneDelegate.swift in Sources */,
-				1AC754B926E99B2F005498EE /* SelectForehandVideoViewController.swift in Sources */,
+				1AC754C226EC0438005498EE /* CameraViewController.swift in Sources */,
+				1AC754B926E99B2F005498EE /* SelectVideoViewController.swift in Sources */,
 				1AC754B726E9996F005498EE /* TennisSetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +391,7 @@
 		};
 		1AF1E14926E19FC7002F1BF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83F36F7ED32AB8E7E5B90BA4 /* Pods-Axcell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +411,7 @@
 		};
 		1AF1E14A26E19FC7002F1BF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1EF278E58C0472797677F07 /* Pods-Axcell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

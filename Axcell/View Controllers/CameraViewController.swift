@@ -1,18 +1,22 @@
 //
-//  SelectBackhandVideoViewController.swift
+//  CameraViewController.swift
 //  Axcell
 //
-//  Created by Qasym Dar on 9/9/21.
+//  Created by Qasym Dar on 9/10/21.
 //
 
 import UIKit
 
-class SelectBackhandVideoViewController: UIViewController {
+class CameraViewController: UIViewController {
+    
+    var videoKey: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
     }
     
 

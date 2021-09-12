@@ -16,14 +16,14 @@ class TennisSetupViewController: UIViewController {
     
 
     @IBAction func didTapForehand(_ sender: Any) {
-        // segue to SelectForehandVideoVC
+        // segue to SelectVideoViewController
         
-        let vc = storyboard?.instantiateViewController(identifier: "SelectForehandVideoViewController")
+        let vc = storyboard?.instantiateViewController(identifier: "SelectVideoViewController")
         
         navigationController?.pushViewController(vc!, animated: true)
     }
     @IBAction func didTapBackhand(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "SelectBackhandVideoViewController")
+        let vc = storyboard?.instantiateViewController(identifier: "SelectVideoViewController")
         
         navigationController?.pushViewController(vc!, animated: true)
         
