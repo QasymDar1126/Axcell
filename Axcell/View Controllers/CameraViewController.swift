@@ -16,7 +16,6 @@ class CameraViewController: UIViewController {
     var stillImageOutput: AVCapturePhotoOutput!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
 
-
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var cameraView: UIView!
     
@@ -77,6 +76,9 @@ class CameraViewController: UIViewController {
     
     @IBAction func didTapNext(_ sender: Any) {
         captionLabel.text = "Recording started!!"
+        // start recording!
+        
+        
     }
     
     /*

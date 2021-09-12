@@ -11,6 +11,9 @@
 		1AC754B926E99B2F005498EE /* SelectVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754B826E99B2F005498EE /* SelectVideoViewController.swift */; };
 		1AC754BF26EAEACB005498EE /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754BE26EAEACB005498EE /* VideoCell.swift */; };
 		1AC754C226EC0438005498EE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754C126EC0438005498EE /* CameraViewController.swift */; };
+		1AC754C726EEA98F005498EE /* one.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1AC754C526EEA98E005498EE /* one.mp4 */; };
+		1AC754C826EEA98F005498EE /* two.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1AC754C626EEA98F005498EE /* two.mp4 */; };
+		1AC754CA26EEAA92005498EE /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754C926EEAA92005498EE /* PlayerView.swift */; };
 		1AF1E13826E19FC6002F1BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1E13726E19FC6002F1BF1 /* AppDelegate.swift */; };
 		1AF1E13A26E19FC6002F1BF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1E13926E19FC6002F1BF1 /* SceneDelegate.swift */; };
 		1AF1E13C26E19FC6002F1BF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1E13B26E19FC6002F1BF1 /* HomeViewController.swift */; };
@@ -25,6 +28,9 @@
 		1AC754B826E99B2F005498EE /* SelectVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectVideoViewController.swift; sourceTree = "<group>"; };
 		1AC754BE26EAEACB005498EE /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		1AC754C126EC0438005498EE /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		1AC754C526EEA98E005498EE /* one.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = one.mp4; sourceTree = "<group>"; };
+		1AC754C626EEA98F005498EE /* two.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = two.mp4; sourceTree = "<group>"; };
+		1AC754C926EEAA92005498EE /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1AF1E13426E19FC6002F1BF1 /* Axcell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axcell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF1E13726E19FC6002F1BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AF1E13926E19FC6002F1BF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,8 +82,18 @@
 			isa = PBXGroup;
 			children = (
 				1AC754BE26EAEACB005498EE /* VideoCell.swift */,
+				1AC754C926EEAA92005498EE /* PlayerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1AC754C426EEA958005498EE /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				1AC754C526EEA98E005498EE /* one.mp4 */,
+				1AC754C626EEA98F005498EE /* two.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		1AF1E12B26E19FC6002F1BF1 = {
@@ -105,6 +121,7 @@
 				1AC754BD26EAEA99005498EE /* Utilities */,
 				1AC754BC26EAEA87005498EE /* View Controllers */,
 				1AC754C026EAEAD0005498EE /* Views */,
+				1AC754C426EEA958005498EE /* Videos */,
 				1AF1E13D26E19FC6002F1BF1 /* Main.storyboard */,
 			);
 			path = Axcell;
@@ -189,6 +206,8 @@
 				1AF1E14426E19FC7002F1BF1 /* LaunchScreen.storyboard in Resources */,
 				1AF1E14126E19FC7002F1BF1 /* Assets.xcassets in Resources */,
 				1AF1E13F26E19FC6002F1BF1 /* Main.storyboard in Resources */,
+				1AC754C826EEA98F005498EE /* two.mp4 in Resources */,
+				1AC754C726EEA98F005498EE /* one.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +263,7 @@
 				1AF1E13C26E19FC6002F1BF1 /* HomeViewController.swift in Sources */,
 				1AC754BF26EAEACB005498EE /* VideoCell.swift in Sources */,
 				1AF1E13826E19FC6002F1BF1 /* AppDelegate.swift in Sources */,
+				1AC754CA26EEAA92005498EE /* PlayerView.swift in Sources */,
 				1AF1E13A26E19FC6002F1BF1 /* SceneDelegate.swift in Sources */,
 				1AC754C226EC0438005498EE /* CameraViewController.swift in Sources */,
 				1AC754B926E99B2F005498EE /* SelectVideoViewController.swift in Sources */,

@@ -13,7 +13,7 @@ class VideoCell: UITableViewCell {
     var delegate: SelectVideoViewController!
     var videoKey: String!
     
-    @IBOutlet weak var ytPlayerView: YouTubePlayerView!
+    @IBOutlet weak var playerView: PlayerView!
     
     @IBAction func selectVideo(_ sender: Any) {
         // segue

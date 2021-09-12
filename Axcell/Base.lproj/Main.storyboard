@@ -166,21 +166,21 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="QIt-Nr-Nnf" customClass="VideoCell" customModule="Axcell" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="340.33334350585938"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="240.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QIt-Nr-Nnf" id="vLY-CT-xrG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="340.33334350585938"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="240.33332824707031"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLo-0V-nXg" customClass="YouTubePlayerView" customModule="YouTubePlayer">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300.33333333333331"/>
-                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLo-0V-nXg" customClass="PlayerView" customModule="Axcell" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200.33333333333334"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="mnb-hm-EbI"/>
+                                                        <constraint firstAttribute="height" constant="200" id="mnb-hm-EbI"/>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGX-BH-Q0q">
-                                                    <rect key="frame" x="246" y="306" width="114" height="30"/>
+                                                    <rect key="frame" x="246" y="206" width="114" height="30"/>
                                                     <state key="normal" title="Select this video">
                                                         <color key="titleColor" red="0.92133218049999999" green="0.30312473499999998" blue="0.30761898700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
@@ -199,7 +199,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="ytPlayerView" destination="vLo-0V-nXg" id="1zm-Hf-txd"/>
+                                            <outlet property="playerView" destination="vLo-0V-nXg" id="Ndx-UP-9A8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -319,9 +319,6 @@
         <image name="tennis button" width="266" height="266"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

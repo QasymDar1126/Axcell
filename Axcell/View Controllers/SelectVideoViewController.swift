@@ -12,7 +12,7 @@ class SelectVideoViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var arrayOfVideoKeys = ["8YH0-jO14NQ", "Y6Q4G54yURY", "5Tl4Yvh1BbE"]
+    var arrayOfVideoFilenames = ["one", "two"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,9 @@ class SelectVideoViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let playerView = PlayerView()
+        view.addSubview(playerView)
     }
     
     func didTapSelect(videoKey: String) {
@@ -34,7 +37,7 @@ class SelectVideoViewController: UIViewController {
 extension SelectVideoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfVideoKeys.count
+        return arrayOfVideoFilenames.count
     }
     
     
@@ -43,8 +46,15 @@ extension SelectVideoViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoCell
         
         // 1
-        cell.videoKey = arrayOfVideoKeys[indexPath.row]
-        cell.ytPlayerView.loadVideoID(cell.videoKey)
+        var videoPlayer: VideoPlayer?
+        if let filePath = Bundle.main.path(forResource: arrayOfVideoFilenames[indexPath.row], ofType: "mp4") {
+                    let fileURL = NSURL(fileURLWithPath: filePath)
+            videoPlayer = VideoPlayer(urlAsset: fileURL, view: cell.playerView)
+                    if let player = videoPlayer {
+                        player.playerRate = 0.67
+                    }
+                }
+        
         cell.delegate = self
         
         return cell
