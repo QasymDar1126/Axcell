@@ -9,16 +9,20 @@ import UIKit
 import AVFoundation
 
 class CameraViewController: UIViewController {
-    
-    var videoFilename: String!
-    
-    var captureSession: AVCaptureSession!
-    var stillImageOutput: AVCapturePhotoOutput!
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer!
 
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var overlayImageView: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var videoFilename: String!
+    var captureSession: AVCaptureSession!
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer!
+    var rearCamera: AVCaptureDevice?
+    var rearCameraInput: AVCaptureDeviceInput?
+    var videoOutput: AVCaptureMovieFileOutput?
+    var videoRecordCompletionBlock: ((URL?, Error?) -> Void)?
+    var isRecordingStarted: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,29 @@ class CameraViewController: UIViewController {
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = .medium
         
+        displayProThumbnail()
+        
+        guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
+            else {
+                print("Unable to access back camera!")
+                return
+        }
+
+        do {
+            let input = try AVCaptureDeviceInput(device: backCamera)
+
+            if captureSession.canAddInput(input) {
+                captureSession.addInput(input)
+                setupLivePreview()
+            }
+        }
+        
+        catch let error  {
+            print("Error Unable to initialize back camera:  \(error.localizedDescription)")
+        }
+    }
+    
+    func displayProThumbnail() {
         let urlPath = Bundle.main.url(forResource: videoFilename, withExtension: "mp4")!
 
         do {
@@ -40,69 +67,96 @@ class CameraViewController: UIViewController {
         } catch let error {
             print("*** Error generating thumbnail: \(error.localizedDescription)")
         }
-        
-        guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
-            else {
-                print("Unable to access back camera!")
-                return
-        }
-
-        do {
-            let input = try AVCaptureDeviceInput(device: backCamera)
-            //Step 9
-            
-            stillImageOutput = AVCapturePhotoOutput()
-            
-
-            if captureSession.canAddInput(input) && captureSession.canAddOutput(stillImageOutput) {
-                captureSession.addInput(input)
-                captureSession.addOutput(stillImageOutput)
-                setupLivePreview()
-            }
-        }
-        catch let error  {
-            print("Error Unable to initialize back camera:  \(error.localizedDescription)")
-        }
-
-        
-
     }
     
     func setupLivePreview() {
-        
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         
         videoPreviewLayer.videoGravity = .resizeAspect
         videoPreviewLayer.connection?.videoOrientation = .portrait
         cameraView.layer.addSublayer(videoPreviewLayer)
         
-        //Step12
-        DispatchQueue.global(qos: .userInitiated).async { //[weak self] in
+        DispatchQueue.global(qos: .userInitiated).async {
             self.captureSession.startRunning()
-            //Step 13
             DispatchQueue.main.async {
                 self.videoPreviewLayer.frame = self.cameraView.bounds
             }
         }
-
     }
-
     
     @IBAction func didTapNext(_ sender: Any) {
-        captionLabel.text = "Recording started!!"
-        // start recording!
-        
-        
+        if isRecordingStarted {
+            videoOutput?.stopRecording()
+            isRecordingStarted = false
+        } else {
+            isRecordingStarted = true
+            startRecording()
+        }
     }
     
-    /*
-    // MARK: - Navigation
+    func startRecording() {
+        captionLabel.text = "Recording started!"
+        // start recording!
+        
+        do {
+            let session = AVCaptureDevice.DiscoverySession.init(deviceTypes:[.builtInWideAngleCamera, .builtInMicrophone], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
+                    
+            let cameras = (session.devices.compactMap{$0})
+                    
+            for camera in cameras {
+                if camera.position == .back {
+                    self.rearCamera = camera
+                    
+                    try camera.lockForConfiguration()
+                        camera.focusMode = .continuousAutoFocus
+                        camera.unlockForConfiguration()
+                    
+                }
+            }
+            
+            guard let captureSession = self.captureSession else {
+                fatalError("captureSessionIsMissing")
+            }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            for outputs in captureSession.outputs{ captureSession.removeOutput(outputs) }
+            
+            self.videoOutput = AVCaptureMovieFileOutput()
+            if captureSession.canAddOutput(self.videoOutput!) {
+                captureSession.addOutput(self.videoOutput!)
+                let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+                let fileUrl = paths[0].appendingPathComponent("output.mov")
+                try? FileManager.default.removeItem(at: fileUrl)
+
+                videoOutput?.startRecording(to: fileUrl, recordingDelegate: self)
+                
+                nextButton.setTitle("Stop", for: .normal)
+            } else {
+                fatalError("cannot add output to capture session")
+            }
+            
+        } catch(_) {
+            
+        }
     }
-    */
 
+}
+
+extension CameraViewController: AVCaptureFileOutputRecordingDelegate {
+    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+        
+        // this method is triggered automatically whenever we tell the iPhone to stop recording
+        
+        // segue to the Playback VC
+        let vc = storyboard?.instantiateViewController(identifier: "PlaybackViewController") as! PlaybackViewController
+        vc.videoUrl = outputFileURL
+        navigationController?.pushViewController(vc, animated: true)
+        
+        // change the labels, button text
+        captionLabel.text = "Recording completed. Tap RE-RECORD to try again."
+        nextButton.setTitle("Re-record", for: .normal)
+    }
+    
+    func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
+        print("started recording")
+    }
 }

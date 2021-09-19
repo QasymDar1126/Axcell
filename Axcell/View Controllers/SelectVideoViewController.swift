@@ -12,7 +12,7 @@ class SelectVideoViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var arrayOfVideoFilenames = ["one", "two"]
+    var arrayOfVideoFilenames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

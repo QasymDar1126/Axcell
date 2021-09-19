@@ -244,7 +244,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivt-rH-ZMZ">
-                                <rect key="frame" x="311" y="651" width="32" height="30"/>
+                                <rect key="frame" x="225" y="651" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.92133218049999999" green="0.30312473499999998" blue="0.30761898700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -272,12 +272,28 @@
                     <connections>
                         <outlet property="cameraView" destination="r08-vh-s1Q" id="ecQ-pJ-ePT"/>
                         <outlet property="captionLabel" destination="Hxd-OC-qjw" id="aBY-yc-mI8"/>
+                        <outlet property="nextButton" destination="Ivt-rH-ZMZ" id="RNQ-d6-I4N"/>
                         <outlet property="overlayImageView" destination="R4a-FL-w0V" id="Q97-ZJ-hkk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rc-bj-HAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2524" y="77.58620689655173"/>
+        </scene>
+        <!--Playback View Controller-->
+        <scene sceneID="nz8-9q-ULY">
+            <objects>
+                <viewController storyboardIdentifier="PlaybackViewController" id="ZgD-pk-WBR" customClass="PlaybackViewController" customModule="Axcell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HqP-q5-JgV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="STm-qO-2a3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCO-Yj-BbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3279" y="78"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Eld-ZO-aUn">
@@ -308,7 +324,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBw-ip-bap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-665" y="105"/>
+            <point key="canvasLocation" x="-671" y="78"/>
         </scene>
     </scenes>
     <resources>
