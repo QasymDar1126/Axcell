@@ -11,25 +11,28 @@ import AVKit
 
 class PlaybackViewController: UIViewController {
     
+    @IBOutlet weak var playerView: PlayerView!
+    
     var videoUrl: URL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // coming from the Camera VC
-        print(videoUrl)
+        // print(videoUrl!)
         
-        let player = AVPlayer(url: videoUrl!)
-        let playerViewController: AVPlayerViewController!
-        playerViewController = AVPlayerViewController()
-        playerViewController.view.frame = self.view.frame
-        playerViewController.player = player
-        playerViewController.showsPlaybackControls = true
-        playerViewController.videoGravity = .resizeAspectFill
-        self.view.addSubview(playerViewController.view)
-        playerViewController.player!.play()
+        //let filePath = Bundle.main.path(forResource: "TennisForehand1", ofType: "mp4")!
+        //let fileURL = NSURL(fileURLWithPath: filePath)
+        
+        let player = VideoPlayer(urlAsset: videoUrl!, view: playerView, startAutoPlay: true, repeatAfterEnd: false)
+        
+        
     }
     
+    @IBAction func didTapVerifyNext(_ sender: Any) {
+        
+        // segue to next VC
+    }
 
     /*
     // MARK: - Navigation

@@ -74,7 +74,7 @@ class VideoPlayer : NSObject {
 
     // MARK: - Init
 
-    convenience init(urlAsset:NSURL, view:PlayerView, startAutoPlay:Bool = true, repeatAfterEnd:Bool = true) {
+    convenience init(urlAsset: URL, view:PlayerView, startAutoPlay:Bool = true, repeatAfterEnd:Bool = true) {
         self.init()
 
         playerView = view
@@ -256,7 +256,7 @@ class VideoPlayer : NSObject {
         cleanUp()
     }
 
-    private func initialSetupWithURL(url:NSURL) {
+    private func initialSetupWithURL(url: URL) {
         let options = [AVURLAssetPreferPreciseDurationAndTimingKey : true]
         urlAsset = AVURLAsset(url: url as URL, options: options)
     }
