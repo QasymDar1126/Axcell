@@ -96,6 +96,8 @@ class CameraViewController: UIViewController {
     
     func startRecording() {
         captionLabel.text = "Recording started!"
+        overlayImageView.isHidden = true
+        
         // start recording!
         
         do {
@@ -153,6 +155,7 @@ extension CameraViewController: AVCaptureFileOutputRecordingDelegate {
         
         // change the labels, button text
         captionLabel.text = "Recording completed. Tap RE-RECORD to try again."
+        overlayImageView.isHidden = false
         nextButton.setTitle("Re-record", for: .normal)
     }
     

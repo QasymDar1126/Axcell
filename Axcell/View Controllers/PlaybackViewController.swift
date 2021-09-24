@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class PlaybackViewController: UIViewController {
     
@@ -16,6 +18,16 @@ class PlaybackViewController: UIViewController {
 
         // coming from the Camera VC
         print(videoUrl)
+        
+        let player = AVPlayer(url: videoUrl!)
+        let playerViewController: AVPlayerViewController!
+        playerViewController = AVPlayerViewController()
+        playerViewController.view.frame = self.view.frame
+        playerViewController.player = player
+        playerViewController.showsPlaybackControls = true
+        playerViewController.videoGravity = .resizeAspectFill
+        self.view.addSubview(playerViewController.view)
+        playerViewController.player!.play()
     }
     
 
