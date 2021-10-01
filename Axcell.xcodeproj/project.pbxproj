@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1366AF27011B2300423749 /* OverlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1366AE27011B2300423749 /* OverlayVideoViewController.swift */; };
 		1AC754B726E9996F005498EE /* TennisSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754B626E9996F005498EE /* TennisSetupViewController.swift */; };
 		1AC754B926E99B2F005498EE /* SelectVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754B826E99B2F005498EE /* SelectVideoViewController.swift */; };
 		1AC754BF26EAEACB005498EE /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC754BE26EAEACB005498EE /* VideoCell.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A1366AE27011B2300423749 /* OverlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayVideoViewController.swift; sourceTree = "<group>"; };
 		1AC754B626E9996F005498EE /* TennisSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisSetupViewController.swift; sourceTree = "<group>"; };
 		1AC754B826E99B2F005498EE /* SelectVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectVideoViewController.swift; sourceTree = "<group>"; };
 		1AC754BE26EAEACB005498EE /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				1AC754B826E99B2F005498EE /* SelectVideoViewController.swift */,
 				1AC754C126EC0438005498EE /* CameraViewController.swift */,
 				1AC754D226F7E95E005498EE /* PlaybackViewController.swift */,
+				1A1366AE27011B2300423749 /* OverlayVideoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				1AF1E13C26E19FC6002F1BF1 /* HomeViewController.swift in Sources */,
 				1AC754D326F7E95E005498EE /* PlaybackViewController.swift in Sources */,
+				1A1366AF27011B2300423749 /* OverlayVideoViewController.swift in Sources */,
 				1AC754BF26EAEACB005498EE /* VideoCell.swift in Sources */,
 				1AF1E13826E19FC6002F1BF1 /* AppDelegate.swift in Sources */,
 				1AC754CA26EEAA92005498EE /* PlayerView.swift in Sources */,

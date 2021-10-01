@@ -30,8 +30,7 @@ class CameraViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         captureSession = AVCaptureSession()
-        captureSession.sessionPreset = .medium
-        
+        captureSession.sessionPreset = .hd4K3840x2160
         displayProThumbnail()
         
         guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video)

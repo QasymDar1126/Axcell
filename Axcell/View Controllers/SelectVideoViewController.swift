@@ -48,7 +48,7 @@ extension SelectVideoViewController: UITableViewDelegate, UITableViewDataSource 
                     let fileURL = URL(fileURLWithPath: filePath)
             videoPlayer = VideoPlayer(urlAsset: fileURL, view: cell.playerView)
                     if let player = videoPlayer {
-                        player.playerRate = 0.67
+                        player.playerRate = 1.0
                     }
                 }
         

@@ -34,6 +34,7 @@ class TennisSetupViewController: UIViewController {
         while(i <= numberOfVideos) {
             vc.arrayOfVideoFilenames.append("\(sport)\(strokeType)\(i)")
             i += 1
+            
         }
         
         navigationController?.pushViewController(vc, animated: true)
